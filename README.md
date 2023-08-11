@@ -5,37 +5,6 @@ This is the official implementation of "A Multidimensional Analysis of Social Bi
 
 > The embedding spaces of image models have been shown to encode a range of social biases such as racism and sexism. Here, we investigate the specific factors that contribute to the emergence of these biases in Vision Transformers (ViT). Therefore, we measure the impact of training data, model architecture, and training objectives on social biases in the learned representations of ViTs. Our findings indicate that counterfactual augmentation training using diffusion-based image editing can mitigate biases, but does not eliminate them. Moreover, we find that larger models are less biased than smaller models, and that joint-embedding models are less biased than reconstruction-based models. In addition, we observe inconsistencies in the learned social biases. To our surprise, ViTs can exhibit opposite biases when trained on the same data set using different self-supervised training objectives. Our findings give insights into the factors that contribute to the emergence of social biases and suggests that we could achieve substantial fairness gains based on model design choices.
 
-## Structure
-```structure
-├── scripts
-│   ├── run_mae.py
-│   ├── run_mim.py
-├── shell_files
-│   ├── run_experiment_input_resolution.sh
-│   ├── run_experiment_model_size.sh
-│   ├── run_experiment_patch_size.sh.
-│   ├── run_experiment_per_layer_analysis.sh
-│   ├── run_experiment_training_objectives.sh
-│   ├── run_mae.sh
-│   ├── run_mim.sh
-├── src
-│   ├── embedding_extractors
-│   │   ├── models
-│   │   │   ├── auto
-│   │   │   ├── beit
-│   │   │   ├── dino
-│   │   │   ├── imagegpt
-│   │   │   ├── vit
-│   │   │   ├── moco_v3
-│   │   │   ├── vit_msn
-│   │   ├── embedding_extractor.py
-│   ├── utils
-│   ├── ieat.py
-│   ├── weat.py
-├── run_ieat.py  
-└── .gitignore
-```
-
 ## Requirements
 
 To install requirements:
